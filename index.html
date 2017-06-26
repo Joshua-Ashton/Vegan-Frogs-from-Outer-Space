@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vegan Frogs from Outer Space!</title>
+        <style>
+            * 
+            {
+                cursor: none;
+            }
+            body
+            {
+                align-content: center;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 300;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                padding: 0;
+                background-color: black;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column wrap;
+                width: 100%;
+                height: 100vh;
+            }
+            #canvas
+            {
+                image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+                image-rendering: -moz-crisp-edges;          /* Firefox                        */
+                image-rendering: -o-crisp-edges;            /* Opera                          */
+                image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+                image-rendering: pixelated; /* Chrome */
+                image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+                -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="hurt-fx" src="Hurt_FX.mp3" type="audio/mpeg"></audio>
+        <audio id="jump-fx" src="Jump_FX.mp3" type="audio/mpeg"></audio>
+        <audio id="shoot-fx" src="Shoot_FX.mp3" type="audio/mpeg"></audio>
+        <audio id="tongue-fx" src="Tongue_FX.mp3" type="audio/mpeg"></audio>
+        <audio autoplay loop id="overworld-music" src="Overworld.mp3" type="audio/mpeg"></audio>
+        <audio loop id="battle-music" src="Battle.mp3" type="audio/mpeg"></audio>
+        <audio loop id="credits-music" src="Credits.mp3" type="audio/mpeg"></audio>
+
+        <canvas id="canvas"></canvas>
+        <script src="level.js" type="text/javascript"></script>
+        <script src="game.js" type="text/javascript"></script>
+    </body>
+</html>
